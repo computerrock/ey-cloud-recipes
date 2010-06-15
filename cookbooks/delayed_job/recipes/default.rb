@@ -9,7 +9,7 @@ if %w(solo app app_master).include?(node[:instance_role])
  
   # Be sure to replace APP_NAME with the name of your application.
   # The run_for_app method also accepts multiple application name arguments.
-  run_for_app('lecool') do |app_name, data|
+  run_for_app('resource_planner') do |app_name, data|
     worker_name = "#{app_name}_delayed_job"
  
     directory "/data/#{app_name}/shared/pids" do
